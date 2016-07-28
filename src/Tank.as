@@ -21,8 +21,9 @@ public class Tank extends Sprite
         stage.addEventListener(ResizeEvent.RESIZE, resizeStage);
 
         _stats = new Stats();
-        addChild(_stats);
+//        addChild(_stats);
 
+        Starling.multitouchEnabled = true;
         _starling = new Starling(Game, stage);
         _starling.antiAliasing = 1;
         _starling.start();

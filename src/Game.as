@@ -33,11 +33,15 @@ public class Game extends Sprite {
         new Assets();
     }
 
+    public static function StartGame(): void{
+        _navigator.showScreen(MAIN_MENU_SCREEN);
+    }
+
     private function initScreenNavigator():void
     {
         _navigator = new ScreenNavigator();
         addScreens();
-        this.addChild( _navigator );
+        addChild( _navigator );
     }
 
     /**

@@ -14,7 +14,7 @@ public class Assets extends AssetManager{
             var loadingFunc:Function = function(ratio:Number):void
             {
                 if (ratio == 1.0)
-                    Game._navigator.showScreen(Game.MAIN_MENU_SCREEN);
+                    Game.StartGame();
             };
             _instance.enqueue(appDir.resolvePath("assets"));
             _instance.loadQueue(loadingFunc);

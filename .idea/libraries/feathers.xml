@@ -3,7 +3,9 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/feathers.swc!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="http://feathersui.com/api-reference/" />
+    </JAVADOC>
     <SOURCES />
   </library>
 </component>
