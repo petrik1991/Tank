@@ -52,6 +52,7 @@ public class Game extends Sprite {
     {
         //_navigator.addScreen( LOADING_SCREEN, new ScreenNavigatorItem( LoadingScreen ) );
         _navigator.addScreen( MAIN_MENU_SCREEN, new ScreenNavigatorItem( MainMenu ) );
+        _navigator.addScreen( GAME_SCREEN, new ScreenNavigatorItem( GameScreen ) );
     }
 
 }

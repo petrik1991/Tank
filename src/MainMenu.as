@@ -10,7 +10,9 @@ import starling.display.Button;
 import starling.display.Image;
 import starling.display.Sprite;
 import starling.events.Event;
+import starling.events.Touch;
 import starling.events.TouchEvent;
+import starling.events.TouchPhase;
 import starling.textures.Texture;
 
 public class MainMenu extends Sprite {
@@ -43,7 +45,7 @@ public class MainMenu extends Sprite {
         tex.draw(sprite);
 
         _btnStartGame = new Button(Texture.fromBitmapData(tex), "Start Game");
-        _btnStartGame.addEventListener(GameTouchEvents.BUTTON_TOUCHED, StartGame);
+        _btnStartGame.addEventListener(TouchEvent.TOUCH, StartGame);
         _btnStartGame.fontSize = 25;
         _btnStartGame.x = (_bg.width - _btnStartGame.width*2) * .25;
         _btnStartGame.y = _bg.height*.7;
@@ -57,12 +59,22 @@ public class MainMenu extends Sprite {
         addChild(_btnExit);
     }
 
-    private function StartGame(e: GameTouchEvents): void{
+    private function StartGame(e: TouchEvent): void{
+        var touch: Touch = e.getTouch(this);
 
+        if(touch.phase == TouchPhase.ENDED){
+            _btnStartGame.removeEventListener(TouchEvent.TOUCH, StartGame);
+            Game._navigator.showScreen(Game.GAME_SCREEN);
+        }
     }
 
     private function ExitGame(e: TouchEvent): void{
-        NativeApplication.nativeApplication.exit();
+        var touch: Touch = e.getTouch(this);
+
+        if(touch.phase == TouchPhase.ENDED) {
+            _btnExit.removeEventListener(TouchEvent.TOUCH, ExitGame);
+            NativeApplication.nativeApplication.exit();
+        }
     }
 }
 }
