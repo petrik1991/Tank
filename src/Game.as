@@ -2,6 +2,8 @@ package {
 import feathers.controls.ScreenNavigator;
 import feathers.controls.ScreenNavigatorItem;
 
+import starling.display.Image;
+
 import starling.display.Sprite;
 import starling.display.Stage;
 import starling.events.Event;
@@ -10,7 +12,7 @@ public class Game extends Sprite {
 
     public static var _stage: Stage = null;
     public static var _instance: Game = null;
-    public static var _navigator: ScreenNavigator = null;
+    public static var _navigator: ScreenNavigator = null;;
 
     public static const LOADING_SCREEN:String = "loading";
     public static const MAIN_MENU_SCREEN:String = "main_menu";

@@ -17,9 +17,9 @@ import starling.textures.Texture;
 
 public class MainMenu extends Sprite {
 
-    public var _bg: Image = null;
     private var _btnStartGame: Button = null;
     private var _btnExit: Button = null;
+    private var _bg: Image = null;
 
         public function MainMenu() {
             super();

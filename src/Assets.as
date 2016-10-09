@@ -1,6 +1,8 @@
 package {
 import flash.filesystem.File;
 
+import starling.display.Image;
+
 import starling.utils.AssetManager;
 
 public class Assets extends AssetManager{
@@ -13,8 +15,8 @@ public class Assets extends AssetManager{
 
             var loadingFunc:Function = function(ratio:Number):void
             {
-                if (ratio == 1.0)
-                    Game.StartGame();
+                if (ratio == 1.0){
+                    Game.StartGame();}
             };
             _instance.enqueue(appDir.resolvePath("assets"));
             _instance.loadQueue(loadingFunc);

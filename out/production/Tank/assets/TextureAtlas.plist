@@ -33,20 +33,20 @@
             <key>player_body.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,1254},{345,270}}</string>
+                <string>{{0,1254},{270,345}}</string>
                 <key>offset</key>
-                <string>{4,2}</string>
+                <string>{-2,5}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{11,3},{345,270}}</string>
+                <string>{{3,2},{270,345}}</string>
                 <key>sourceSize</key>
-                <string>{359,280}</string>
+                <string>{280,359}</string>
             </dict>
             <key>player_head.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{345,1254},{198,440}}</string>
+                <string>{{270,1254},{198,440}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
