@@ -1,9 +1,7 @@
 package objects {
 import flash.geom.Point;
-
-import starling.display.Image;
-
 import starling.display.Sprite;
+import starling.utils.deg2rad;
 
 public class Entity extends Sprite {
 
@@ -17,6 +15,10 @@ public class Entity extends Sprite {
     private function Instantiate(pos: Point): void{
         x = pos.x;
         y = pos.y;
+    }
+
+    public function RotateMe(_rotation: Number){
+        this.rotation = deg2rad(_rotation);
     }
 
     protected function UpdatePosition(){

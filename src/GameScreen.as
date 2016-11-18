@@ -1,23 +1,25 @@
 package {
-import objects.Player;
-
-import starling.display.Image;
-
-import starling.display.Image;
-
 import starling.display.Sprite;
+import starling.events.Event;
 
 public class GameScreen extends Sprite {
 
-    public var _player: Player = null;
+    private var battle: CreateBattle = null;
 
     public function GameScreen() {
 
         super();
 
-        _player = new Player(Config.START_PLAYER_POSITION, new Image(Assets._instance.getTexture("player_body")), new Image(Assets._instance.getTexture("player_head")));
+        this.addEventListener(Event.ADDED_TO_STAGE, init);
+    }
 
-        Game._instance.addChild(_player);
+    public function init(e: Event){
+        this.removeEventListener(Event.ADDED_TO_STAGE, init);
+
+        if(battle == null)
+            battle = new CreateBattle();
+
+        Game._instance.addChild(battle);
     }
 }
 }

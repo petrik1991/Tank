@@ -29,7 +29,7 @@ public class MainMenu extends Sprite {
     private function Init(e: Event): void{
         removeEventListener(Event.ADDED_TO_STAGE, Init);
 
-        _bg = new Image(Assets._instance.getTexture("bg1"));
+        _bg = new Image(Game.Assets.getTexture("bg1"));
         addChild(_bg);
 
         AddButtons();
